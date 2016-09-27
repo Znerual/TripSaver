@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Medium Text"
+        android:id="@+id/changeFactorNameTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/menge"
+        android:id="@+id/mengeFixTextView"
+        android:layout_alignTop="@+id/umrechnungsfaktorFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Medium"
+        android:id="@+id/mengeTextView"
+        android:layout_below="@+id/changeFactorNameTextView"
+        android:layout_toRightOf="@+id/mengeFixTextView"
+        android:layout_toEndOf="@+id/mengeFixTextView"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/umrechnungsfaktorKurz"
+        android:id="@+id/umrechnungsfaktorFixTextView"
+        android:layout_below="@+id/changeFactorNameTextView"
+        android:layout_toRightOf="@+id/mengeTextView"
+        android:layout_toEndOf="@+id/mengeTextView"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Medium Text"
+        android:id="@+id/umrechnungsfaktorTextView"
+        android:layout_alignTop="@+id/umrechnungsfaktorFixTextView"
+        android:layout_toRightOf="@+id/umrechnungsfaktorFixTextView"
+        android:layout_toEndOf="@+id/umrechnungsfaktorFixTextView"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/kommentarTextView"
+        android:layout_below="@+id/mengeFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

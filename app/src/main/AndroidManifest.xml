@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="laurenzsoft.com.waehrungsrechner"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Browser" />
+        <activity android:name=".EditLogFilter" />
+        <activity android:name=".EditLogEntriesListActivity" />
+        <activity android:name=".EditLogEntriesActivity" />
+        <activity android:name=".EditChangeFactorActivity"/>
+        <activity android:name=".EditChangefactorsListActivity"/>
+    </application>
+
+</manifest>

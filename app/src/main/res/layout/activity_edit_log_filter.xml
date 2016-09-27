@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditLogFilter">
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nach"
+        android:id="@+id/datumNachToggle"
+        android:layout_below="@+id/nachTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vor"
+        android:id="@+id/datumVorToggle"
+        android:layout_below="@+id/vorTextView"
+        android:layout_toRightOf="@+id/datumNachToggle"
+        android:layout_toEndOf="@+id/datumNachToggle"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nach"
+        android:id="@+id/nachTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/vor"
+        android:id="@+id/vorTextView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/datumNachToggle"
+        android:layout_toEndOf="@+id/datumNachToggle"
+        android:layout_marginLeft="25dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigeversteckte"
+        android:id="@+id/versteckteCheckBox"
+        android:layout_alignTop="@+id/datumVorToggle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/datumVorToggle"
+        android:layout_toRightOf="@+id/datumVorToggle"
+        android:layout_toEndOf="@+id/datumVorToggle"
+        android:checked="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/datumTextView"
+        android:layout_below="@+id/datumNachToggle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/spaeter"
+        android:id="@+id/spaeterTextView"
+        android:layout_below="@+id/datumTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spaeter"
+        android:id="@+id/zeitSpaeterToggle"
+        android:layout_below="@+id/spaeterTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:enabled="false" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="frueher"
+        android:id="@+id/zeitFrueherToggle"
+        android:layout_alignTop="@+id/zeitSpaeterToggle"
+        android:layout_alignLeft="@+id/datumVorToggle"
+        android:layout_alignStart="@+id/datumVorToggle"
+        android:checked="false"
+        android:enabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/frueher"
+        android:id="@+id/frueherTextView"
+        android:layout_above="@+id/zeitFrueherToggle"
+        android:layout_alignLeft="@+id/zeitFrueherToggle"
+        android:layout_alignStart="@+id/zeitFrueherToggle"
+        android:layout_marginLeft="25dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigekommentar"
+        android:id="@+id/zeigeKommentarCheckBox"
+        android:layout_alignTop="@+id/zeitFrueherToggle"
+        android:layout_toRightOf="@+id/zeitFrueherToggle"
+        android:layout_alignRight="@+id/versteckteCheckBox"
+        android:layout_alignEnd="@+id/versteckteCheckBox"
+        android:layout_alignBottom="@+id/zeitFrueherToggle"
+        android:textSize="16sp"
+        android:checked="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/zeitTextView"
+        android:layout_below="@+id/zeitSpaeterToggle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/zeigeKommentarCheckBox"
+        android:layout_alignEnd="@+id/zeigeKommentarCheckBox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speicher"
+        android:id="@+id/speichernButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigemenge"
+        android:id="@+id/mengeCheckBox"
+        android:layout_below="@+id/zeitTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigemeumgerechnet"
+        android:id="@+id/umgerechnetCheckBox"
+        android:layout_below="@+id/zeitTextView"
+        android:layout_toRightOf="@+id/mengeCheckBox"
+        android:layout_toEndOf="@+id/mengeCheckBox"
+        android:textSize="16sp"
+        android:checked="true"
+        android:layout_marginLeft="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigeumrechnungsfaktor"
+        android:id="@+id/umrechnungsfaktorCheckBox"
+        android:layout_below="@+id/mengeCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:checked="true"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigeeinnahmen"
+        android:id="@+id/einnahmenCheckBox"
+        android:checked="true"
+        android:layout_below="@+id/umrechnungsfaktorCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigeausgaben"
+        android:id="@+id/ausgabenCheckBox"
+        android:layout_alignTop="@+id/einnahmenCheckBox"
+        android:layout_toRightOf="@+id/einnahmenCheckBox"
+        android:layout_toEndOf="@+id/einnahmenCheckBox"
+        android:layout_marginLeft="15dp"
+        android:checked="true"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zeigezeit"
+        android:id="@+id/zeitCheckBox"
+        android:layout_below="@+id/einnahmenCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="true"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

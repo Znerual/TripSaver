@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/logButton"
+        android:title="@string/log"
+        compat:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/bilanzButton"
+        android:title="@string/bilanz"
+        compat:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/filterLogButton"
+        android:title="@string/filtern"/>
+    <item
+        android:id="@+id/addChangeFactorButton"
+        android:title="@string/neuerChangeFactor" />
+    <item
+        android:id="@+id/editChangeFactorButton"
+        android:title="@string/editChangefactor" />
+    <item
+        android:id="@+id/editLogButton"
+        android:title="@string/logaendern"/>
+
+    <item
+        android:id="@+id/exportLogButton"
+        android:title="@string/logexportieren"/>
+    <item
+        android:id="@+id/exportBilanzButton"
+        android:title="@string/bilanzexportieren"/>
+    <item
+        android:id="@+id/clearCommentFieldCheck"
+        android:title="@string/kommentarfeldleeren"
+        android:checkable="true"
+        android:checked="false"/>
+    <item
+        android:id="@+id/showFAQButton"
+        android:title="@string/faq" />
+</menu>

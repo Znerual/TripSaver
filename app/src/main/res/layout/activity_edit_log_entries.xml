@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="laurenzsoft.com.waehrungsrechner.EditLogEntriesActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/datum"
+        android:id="@+id/dateFixTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/dateTextView"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/dateFixTextView"
+        android:layout_toEndOf="@+id/dateFixTextView"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Uhrzeit"
+        android:id="@+id/zeitFixTextView"
+        android:layout_below="@+id/dateFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/timeTextView"
+        android:layout_below="@+id/dateTextView"
+        android:layout_toRightOf="@+id/zeitFixTextView"
+        android:layout_toEndOf="@+id/zeitFixTextView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/menge"
+        android:id="@+id/mengeFixTextView"
+        android:layout_below="@+id/zeitFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/mengeEditText"
+        android:layout_below="@+id/timeTextView"
+        android:layout_toRightOf="@+id/mengeFixTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/umrechnungsfaktor"
+        android:id="@+id/umrechnungsfaktorFixTextView"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/mengeEditText"
+        android:layout_toRightOf="@+id/umrechnungsfaktorFixTextView"
+        android:layout_toEndOf="@+id/umrechnungsfaktorFixTextView"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Output"
+        android:id="@+id/outputFixTextView"
+        android:layout_below="@+id/umrechnungsfaktorFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/outputTextView"
+        android:layout_below="@+id/umrechnungsfaktorFixTextView"
+        android:layout_toRightOf="@+id/outputFixTextView"
+        android:layout_toEndOf="@+id/outputFixTextView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gutschrift"
+        android:id="@+id/gutschriftEditLogCheckBox"
+        android:layout_below="@+id/outputFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastschrift"
+        android:id="@+id/lastschriftEditLogCheckBox"
+        android:layout_alignTop="@+id/gutschriftEditLogCheckBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speicher"
+        android:id="@+id/speichernButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versteckt"
+        android:id="@+id/hiddenCheckBox"
+        android:checked="false"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_above="@+id/updateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Kommentar"
+        android:id="@+id/kommentarFixTextView"
+        android:layout_below="@+id/gutschriftEditLogCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/kommentarEditEditText"
+        android:layout_below="@+id/kommentarFixTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:nestedScrollingEnabled="false"
+        android:layout_above="@+id/hiddenCheckBox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/werteaktualisieren"
+        android:id="@+id/updateButton"
+        android:layout_above="@+id/speichernButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loeschen"
+        android:id="@+id/deleteButton"
+        android:layout_above="@+id/speichernButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

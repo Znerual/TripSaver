@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="laurenzsoft.com.waehrungsrechner.MainActivity">
+
+
+
+    <Button
+        android:id="@+id/clearEuro"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="@drawable/delete"
+        android:layout_alignTop="@+id/euroIn"
+        android:layout_alignRight="@+id/euroIn"
+        android:layout_alignEnd="@+id/euroIn" />
+    <RadioButton
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:layout_alignBottom="@+id/euroIn"
+        android:id="@+id/selectionEuro" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="35dip"
+        android:paddingEnd="35dip"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/euroIn"
+        android:imeOptions="actionDone"
+        android:layout_below="@+id/euroTextView"
+        android:layout_toRightOf="@+id/selectionEuro"
+        android:layout_toEndOf="@id/selectionEuro"
+        android:layout_toLeftOf="@+id/kommentarTextView"
+        android:layout_toStartOf="@+id/kommentarTextView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/andereWaehrung"
+        android:id="@+id/otherTextView"
+        android:layout_below="@+id/euroIn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/euro"
+        android:id="@+id/euroTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+
+    <Button
+        android:id="@+id/clearAndere"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="@drawable/delete"
+        android:layout_alignTop="@+id/andereIn"
+        android:layout_alignRight="@+id/andereIn"
+        android:layout_alignEnd="@+id/andereIn" />
+    <RadioButton
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:layout_alignBottom="@+id/andereIn"
+        android:id="@+id/selectionOther" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/andereIn"
+        android:paddingRight="35dip"
+        android:layout_below="@+id/otherTextView"
+        android:imeOptions="actionDone"
+        android:layout_alignRight="@+id/euroIn"
+        android:layout_alignEnd="@+id/euroIn"
+        android:layout_toRightOf="@+id/selectionOther"
+        android:layout_toEndOf="@+id/selectionOther" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:digits="0123456789."
+        android:id="@+id/changeFactorIn"
+        android:layout_below="@+id/changeFactorTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/umrechnungsfaktor"
+        android:id="@+id/changeFactorTextView"
+        android:layout_below="@+id/selectionOther"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/umrechen"
+        android:id="@+id/calculateButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gutschrift"
+        android:id="@+id/gutschriftCheckBox"
+        android:checked="false"
+        android:textSize="16sp"
+        android:layout_alignBottom="@+id/changeFactorTextView"
+        android:layout_alignLeft="@+id/kommentarEditEditText"
+        android:layout_alignStart="@+id/kommentarEditEditText" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastschrift"
+        android:id="@+id/lastschriftCheckBox"
+        android:checked="true"
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/gutschriftCheckBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Kommentar"
+        android:id="@+id/kommentarTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/kommentarEditEditText"
+        android:layout_alignStart="@+id/kommentarEditEditText" />
+
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/kommentarEditEditText"
+        android:layout_below="@+id/kommentarTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="25dp"
+        android:layout_above="@+id/gutschriftCheckBox" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignTop="@+id/changeFactorTextView"
+        android:layout_toLeftOf="@+id/gutschriftCheckBox"
+        android:layout_toRightOf="@+id/changeFactorTextView"
+        android:layout_toEndOf="@+id/changeFactorTextView"
+        android:layout_above="@+id/changeFactorIn"
+        android:layout_marginLeft="20dp"
+        android:layout_alignEnd="@id/clearAndere" />
+
+</RelativeLayout>
